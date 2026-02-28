@@ -5,6 +5,7 @@ import { MoreStories } from "@/app/_components/more-stories";
 import { prisma } from "@/lib/prisma";
 import type { Post as UiPost } from "@/interfaces/post";
 import { getAllPosts } from "@/lib/api";
+export const dynamic = 'force-dynamic';
 
 type DbPost = {
   id: number;
