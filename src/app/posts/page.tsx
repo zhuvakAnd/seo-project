@@ -38,13 +38,12 @@ export default async function PostsPage() {
       title: p.title,
       date: p.createdAt.toISOString(),
       coverImage:
-        p.coverImage ?? fallback?.coverImage ?? "/assets/blog/default-cover.jpg",
+        fallback?.coverImage ?? "/assets/blog/default-cover.jpg",
       author:
-        p.author ??
         fallback?.author ??
         { name: "Unknown", picture: "/assets/blog/authors/default.png" },
       excerpt: p.content.slice(0, 140),
-      ogImage: { url: p.coverImage ?? fallback?.coverImage ?? "/assets/blog/default-cover.jpg" },
+      ogImage: { url: fallback?.coverImage ?? "/assets/blog/default-cover.jpg" },
       content: p.content,
     };
   });
